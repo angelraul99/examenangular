@@ -13,7 +13,7 @@ import { UsuariosComponent } from 'src/crud/usuarios/Usuarios.component';
 import { InicioComponent } from './crud/inicio/inicio.component';
 import { BienvenidoComponent } from './crud/inicio/bienvenido/bienvenido.component';
 import { RegistComponent } from 'src/crud/regist/regist.component';
-
+import { MenuComponent } from 'src/crud/menu/menu.component';
 const routes: Routes = [
 {path:'',redirectTo:'/inicio',pathMatch:'full'},
 {path: 'inicio',component: InicioComponent,children:[
@@ -21,6 +21,10 @@ const routes: Routes = [
   
   
 ]},
+{path:'edu',component:EducacionDetailComponent},
+{path:'pol',component:PoliticaDetailComponent},
+{path:'saludus',component:SaludDetailComponent},
+{path:'menu',component:MenuComponent},
 {path:'usu',component:UsuariosDetailComponent},
 {path: 'redus',component:RegistrarDetailComponent},
 {path:'red',component:RegistComponent},

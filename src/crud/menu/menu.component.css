@@ -1,0 +1,10 @@
+.container{
+   
+    background-image: url(../../assets/img/marmol_white_rhino_mate_lamina.jpg);
+    background-size: cover;
+    background-position: center; 
+    min-height: 100vh;
+
+  
+
+}
