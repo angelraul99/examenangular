@@ -4,13 +4,7 @@
     </div>
     <div class="card-body">
         <form (ngSubmit)="submitUsuarios(forma)" #forma="ngForm" class="row g-3">
-<div class="col-md-6">
-<label for="label-id_us"  class="form-label">id_us:</label>"
-<input #inputid_us="ngModel"  type="text" name="id_us" [ngClass]="{'is-invalid': inputid_us.touched && inputid_us.hasError('required') }" [(ngModel)]="usuarios.id_us" class="form-control" id="id_us" value="" required>
-<div class="invalid-feedback">
-                Field required
-            </div>
-        </div>
+
 <div class="col-md-6">
 <label for="label-nombre"  class="form-label">nombre:</label>"
 <input #inputnombre="ngModel"  type="text" name="nombre" [ngClass]="{'is-invalid': inputnombre.touched && inputnombre.hasError('required') }" [(ngModel)]="usuarios.nombre" class="form-control" id="nombre" value="" required>
@@ -56,8 +50,8 @@
 <div class="col-12 text-center">
             <button class=" btn btn-primary" type="submit" [disabled]="forma.invalid">{{this.isNew ? "Register" : "Update"}}</button>
             <button style="margin-left: 10px;" class=" btn btn-danger" type="button" (click)="limpiarForm(forma)">Clear</button>
-            <button *ngIf="!this.isNew" style="margin-left: 10px;" class=" btn btn-danger" type="button" (click)="emitChange.emit()">Cancel</button>
-          </div>
+            <button style="margin-left: 10px;" class=" btn btn-danger" type="button" routerLink="/red">Clear</button>
+</div>
       </form>
     </div>
 </div>

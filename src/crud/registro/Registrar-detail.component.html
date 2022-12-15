@@ -4,13 +4,7 @@
     </div>
     <div class="card-body">
         <form (ngSubmit)="submitRegistrar(forma)" #forma="ngForm" class="row g-3">
-<div class="col-md-6">
-<label for="label-id_en"  class="form-label">id_en:</label>"
-<input #inputid_en="ngModel"  type="text" name="id_en" [ngClass]="{'is-invalid': inputid_en.touched && inputid_en.hasError('required') }" [(ngModel)]="registrar.id_en" class="form-control" id="id_en" value="" required>
-<div class="invalid-feedback">
-                Field required
-            </div>
-        </div>
+
 <div class="col-md-6">
 <label for="label-estatus"  class="form-label">estatus:</label>"
 <input #inputestatus="ngModel"  type="text" name="estatus" [ngClass]="{'is-invalid': inputestatus.touched && inputestatus.hasError('required') }" [(ngModel)]="registrar.estatus" class="form-control" id="estatus" value="" required>
