@@ -33,10 +33,7 @@ mostrarActualizar: boolean = false;
     });
   }
 
-  actualizar(idUsuarios: any) {
-    this.id = idUsuarios;
-    this.mostrarActualizar = true;
-  }
+
 
   restableceRegistro(){
     this.mostrarActualizar = false;

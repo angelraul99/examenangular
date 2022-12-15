@@ -21,6 +21,8 @@ const routes: Routes = [
   
   
 ]},
+{path:'usu',component:UsuariosDetailComponent},
+{path: 'redus',component:RegistrarDetailComponent},
 {path:'red',component:RegistComponent},
 {path: 'Educacion', component:EducacionComponent}, 
 {path: 'Politica', component:PoliticaComponent}, 

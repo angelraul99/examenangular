@@ -7,3 +7,16 @@
   
 
 }
+.xl{
+    background-color: coral;
+    border-color: darkblue;
+    margin: 5px;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+
+}
+.xl:hover{
+    background-color: chocolate;
+    border-radius:  chocolate;
+    border-width: 3px;
+}

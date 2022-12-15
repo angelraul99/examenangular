@@ -18,6 +18,7 @@ import { InicioComponent } from './crud/inicio/inicio.component';
 import { BienvenidoComponent } from './crud/inicio/bienvenido/bienvenido.component';
 
 import { RegistComponent } from '../crud/regist/regist.component';
+import { MenuComponent } from '../crud/menu/menu.component';
 
  @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ InicioComponent,
 BienvenidoComponent,
 
 RegistComponent,
+  MenuComponent,
 
  ],
 imports: [

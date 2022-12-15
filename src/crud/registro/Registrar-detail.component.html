@@ -48,7 +48,7 @@
             </div>
         </div>
 <div class="col-12 text-center">
-            <button class=" btn btn-primary" type="submit" [disabled]="forma.invalid">{{this.isNew ? "Register" : "Update"}}</button>
+            <button class=" btn btn-primary " type="submit" [disabled]="forma.invalid">{{this.isNew ? "Register" : "Update"}}</button>
             <button style="margin-left: 10px;" class=" btn btn-danger" type="button" (click)="limpiarForm(forma)">Clear</button>
             <button *ngIf="!this.isNew" style="margin-left: 10px;" class=" btn btn-danger" type="button" (click)="emitChange.emit()">Cancel</button>
           </div>
