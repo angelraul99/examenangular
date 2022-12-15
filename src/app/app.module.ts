@@ -16,8 +16,8 @@ import { SaludDetailComponent } from 'src/crud/salud/Salud-detail.component';
 import { UsuariosDetailComponent } from 'src/crud/usuarios/Usuarios-detail.component';
 import { InicioComponent } from './crud/inicio/inicio.component';
 import { BienvenidoComponent } from './crud/inicio/bienvenido/bienvenido.component';
-import { LoginComponent } from './crud/inicio/login/login.component';
-import { RegistComponent } from './crud/inicio/regist/regist.component';
+
+import { RegistComponent } from '../crud/regist/regist.component';
 
  @NgModule({
   declarations: [
@@ -34,7 +34,7 @@ RegistrarDetailComponent,
 UsuariosDetailComponent,
 InicioComponent,
 BienvenidoComponent,
-LoginComponent,
+
 RegistComponent,
 
  ],
