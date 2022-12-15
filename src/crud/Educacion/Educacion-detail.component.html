@@ -1,0 +1,50 @@
+<div class="card mt-5">
+    <div class="card-header">
+        {{this.isNew ? "Register Educacion" : "Update Educacion"}}
+    </div>
+    <div class="card-body">
+        <form (ngSubmit)="submitEducacion(forma)" #forma="ngForm" class="row g-3">
+<div class="col-md-6">
+<label for="label-id_edu"  class="form-label">id_edu:</label>"
+<input #inputid_edu="ngModel"  type="text" name="id_edu" [ngClass]="{'is-invalid': inputid_edu.touched && inputid_edu.hasError('required') }" [(ngModel)]="educacion.id_edu" class="form-control" id="id_edu" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-comomejorarias"  class="form-label">comomejorarias:</label>"
+<input #inputcomomejorarias="ngModel"  type="text" name="comomejorarias" [ngClass]="{'is-invalid': inputcomomejorarias.touched && inputcomomejorarias.hasError('required') }" [(ngModel)]="educacion.comomejorarias" class="form-control" id="comomejorarias" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-materiafab"  class="form-label">materiafab:</label>"
+<input #inputmateriafab="ngModel"  type="text" name="materiafab" [ngClass]="{'is-invalid': inputmateriafab.touched && inputmateriafab.hasError('required') }" [(ngModel)]="educacion.materiafab" class="form-control" id="materiafab" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-porque"  class="form-label">porque:</label>"
+<input #inputporque="ngModel"  type="text" name="porque" [ngClass]="{'is-invalid': inputporque.touched && inputporque.hasError('required') }" [(ngModel)]="educacion.porque" class="form-control" id="porque" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-sielmuneco"  class="form-label">sielmuneco:</label>"
+<input #inputsielmuneco="ngModel"  type="text" name="sielmuneco" [ngClass]="{'is-invalid': inputsielmuneco.touched && inputsielmuneco.hasError('required') }" [(ngModel)]="educacion.sielmuneco" class="form-control" id="sielmuneco" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-12 text-center">
+            <button class=" btn btn-primary" type="submit" [disabled]="forma.invalid">{{this.isNew ? "Register" : "Update"}}</button>
+            <button style="margin-left: 10px;" class=" btn btn-danger" type="button" (click)="limpiarForm(forma)">Clear</button>
+            <button *ngIf="!this.isNew" style="margin-left: 10px;" class=" btn btn-danger" type="button" (click)="emitChange.emit()">Cancel</button>
+          </div>
+      </form>
+    </div>
+</div>
+<router-outlet></router-outlet> 

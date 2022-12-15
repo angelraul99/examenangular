@@ -1,0 +1,64 @@
+<div class="card mt-5">
+    <div class="card-header">
+        {{this.isNew ? "Register Usuarios" : "Update Usuarios"}}
+    </div>
+    <div class="card-body">
+        <form (ngSubmit)="submitUsuarios(forma)" #forma="ngForm" class="row g-3">
+<div class="col-md-6">
+<label for="label-id_us"  class="form-label">id_us:</label>"
+<input #inputid_us="ngModel"  type="text" name="id_us" [ngClass]="{'is-invalid': inputid_us.touched && inputid_us.hasError('required') }" [(ngModel)]="usuarios.id_us" class="form-control" id="id_us" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-nombre"  class="form-label">nombre:</label>"
+<input #inputnombre="ngModel"  type="text" name="nombre" [ngClass]="{'is-invalid': inputnombre.touched && inputnombre.hasError('required') }" [(ngModel)]="usuarios.nombre" class="form-control" id="nombre" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-rol"  class="form-label">rol:</label>"
+<input #inputrol="ngModel"  type="text" name="rol" [ngClass]="{'is-invalid': inputrol.touched && inputrol.hasError('required') }" [(ngModel)]="usuarios.rol" class="form-control" id="rol" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-apellidos"  class="form-label">apellidos:</label>"
+<input #inputapellidos="ngModel"  type="text" name="apellidos" [ngClass]="{'is-invalid': inputapellidos.touched && inputapellidos.hasError('required') }" [(ngModel)]="usuarios.apellidos" class="form-control" id="apellidos" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-genero"  class="form-label">genero:</label>"
+<input #inputgenero="ngModel"  type="text" name="genero" [ngClass]="{'is-invalid': inputgenero.touched && inputgenero.hasError('required') }" [(ngModel)]="usuarios.genero" class="form-control" id="genero" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-correo"  class="form-label">correo:</label>"
+<input #inputcorreo="ngModel"  type="text" name="correo" [ngClass]="{'is-invalid': inputcorreo.touched && inputcorreo.hasError('required') }" [(ngModel)]="usuarios.correo" class="form-control" id="correo" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-contrasena"  class="form-label">contrasena:</label>"
+<input #inputcontrasena="ngModel"  type="text" name="contrasena" [ngClass]="{'is-invalid': inputcontrasena.touched && inputcontrasena.hasError('required') }" [(ngModel)]="usuarios.contrasena" class="form-control" id="contrasena" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-12 text-center">
+            <button class=" btn btn-primary" type="submit" [disabled]="forma.invalid">{{this.isNew ? "Register" : "Update"}}</button>
+            <button style="margin-left: 10px;" class=" btn btn-danger" type="button" (click)="limpiarForm(forma)">Clear</button>
+            <button *ngIf="!this.isNew" style="margin-left: 10px;" class=" btn btn-danger" type="button" (click)="emitChange.emit()">Cancel</button>
+          </div>
+      </form>
+    </div>
+</div>
+<router-outlet></router-outlet> 

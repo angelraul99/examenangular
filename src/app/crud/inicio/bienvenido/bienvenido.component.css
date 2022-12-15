@@ -1,0 +1,33 @@
+p{
+    font-family: 'Nerko One', cursive;
+    font-size: 2.3em;
+    
+}
+.container{
+   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      
+    
+}
+hr {
+border-width: 3px;
+max-width: 65px;
+border-color: rgb(80, 141, 255);
+
+}
+.btn-xl{
+    background-color: coral;
+    border-color: darkblue;
+    margin: 5px;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+
+}
+.btn-xl:hover{
+    background-color: chocolate;
+    border-radius:  chocolate;
+    border-width: 3px;
+}

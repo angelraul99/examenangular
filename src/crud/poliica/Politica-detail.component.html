@@ -1,0 +1,50 @@
+<div class="card mt-5">
+    <div class="card-header">
+        {{this.isNew ? "Register Politica" : "Update Politica"}}
+    </div>
+    <div class="card-body">
+        <form (ngSubmit)="submitPolitica(forma)" #forma="ngForm" class="row g-3">
+<div class="col-md-6">
+<label for="label-id_pol"  class="form-label">id_pol:</label>"
+<input #inputid_pol="ngModel"  type="text" name="id_pol" [ngClass]="{'is-invalid': inputid_pol.touched && inputid_pol.hasError('required') }" [(ngModel)]="politica.id_pol" class="form-control" id="id_pol" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-Queopinasdelpresi"  class="form-label">Queopinasdelpresi:</label>"
+<input #inputqueopinasdelpresi="ngModel"  type="text" name="Queopinasdelpresi" [ngClass]="{'is-invalid': inputqueopinasdelpresi.touched && inputqueopinasdelpresi.hasError('required') }" [(ngModel)]="politica.queopinasdelpresi" class="form-control" id="Queopinasdelpresi" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-quiencresqueganaral"  class="form-label">quiencresqueganaral:</label>"
+<input #inputquiencresqueganaral="ngModel"  type="text" name="quiencresqueganaral" [ngClass]="{'is-invalid': inputquiencresqueganaral.touched && inputquiencresqueganaral.hasError('required') }" [(ngModel)]="politica.quiencresqueganaral" class="form-control" id="quiencresqueganaral" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-porque"  class="form-label">porque:</label>"
+<input #inputporque="ngModel"  type="text" name="porque" [ngClass]="{'is-invalid': inputporque.touched && inputporque.hasError('required') }" [(ngModel)]="politica.porque" class="form-control" id="porque" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-md-6">
+<label for="label-sielmuneco"  class="form-label">sielmuneco:</label>"
+<input #inputsielmuneco="ngModel"  type="text" name="sielmuneco" [ngClass]="{'is-invalid': inputsielmuneco.touched && inputsielmuneco.hasError('required') }" [(ngModel)]="politica.sielmuneco" class="form-control" id="sielmuneco" value="" required>
+<div class="invalid-feedback">
+                Field required
+            </div>
+        </div>
+<div class="col-12 text-center">
+            <button class=" btn btn-primary" type="submit" [disabled]="forma.invalid">{{this.isNew ? "Register" : "Update"}}</button>
+            <button style="margin-left: 10px;" class=" btn btn-danger" type="button" (click)="limpiarForm(forma)">Clear</button>
+            <button *ngIf="!this.isNew" style="margin-left: 10px;" class=" btn btn-danger" type="button" (click)="emitChange.emit()">Cancel</button>
+          </div>
+      </form>
+    </div>
+</div>
+<router-outlet></router-outlet> 
