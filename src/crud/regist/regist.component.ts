@@ -9,12 +9,13 @@ import { Usuario } from 'src/models/usuario';
   styleUrls: ['./regist.component.css']
 })
 export class RegistComponent implements OnInit {
- 
+
+
   constructor() { 
-   
+    
   }
 
   ngOnInit(): void {
   }
- 
+  
 }
