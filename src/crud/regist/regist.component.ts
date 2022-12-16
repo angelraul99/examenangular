@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validator, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Usuario } from 'src/models/usuario';
+
 
 @Component({
   selector: 'app-regist',
@@ -9,6 +9,10 @@ import { Usuario } from 'src/models/usuario';
   styleUrls: ['./regist.component.css']
 })
 export class RegistComponent implements OnInit {
+  loginform = new FormGroup({
+    Usuario : new FormControl('',Validators.required),
+    contraseña : new FormControl('',Validators.required)
+  })
 
 
   constructor() { 
@@ -16,6 +20,10 @@ export class RegistComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+  onLogin(form){
+    console.log(form)
+
   }
   
 }
